@@ -458,6 +458,10 @@
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.missingJavadocTagDescription">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.wst.sse.ui/hoverModifiers">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -909,6 +913,14 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.wst.sse.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.wst.sse.ui/hoverModifiers"
+          value="combinationHover|true|0;problemHover|false|0;documentationHover|false|0;annotationHover|true|Shift;"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.wst.xml.core">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -921,7 +933,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.wst.xml.core/lineWidth"
-          value="240"/>
+          value="360"/>
     </setupTask>
   </setupTask>
   <setupTask
