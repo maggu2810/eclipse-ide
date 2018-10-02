@@ -943,34 +943,13 @@
     <description>Define the JRE needed to compile and run the Java projects of ${scope.project.label}</description>
   </setupTask>
   <setupTask
-      xsi:type="setup:EclipseIniTask"
-      option="-Xmx"
-      value="1024m"
-      vm="true">
-    <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:ResourceCreationTask"
-      excludedTriggers="STARTUP MANUAL"
-      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;section name=&quot;Workbench&quot;>&#xD;&#xA;&#x9;&lt;section name=&quot;org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart&quot;>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;true&quot; key=&quot;group_libraries&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;false&quot; key=&quot;linkWithEditor&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;2&quot; key=&quot;layout&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;2&quot; key=&quot;rootMode&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;packageExplorer configured=&amp;quot;true&amp;quot; group_libraries=&amp;quot;1&amp;quot; layout=&amp;quot;2&amp;quot; linkWithEditor=&amp;quot;0&amp;quot; rootMode=&amp;quot;2&amp;quot; sortWorkingSets=&amp;quot;false&amp;quot; workingSetName=&amp;quot;&amp;quot;&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;workingSet editPageId=&amp;quot;org.eclipse.jdt.internal.ui.OthersWorkingSet&amp;quot; factoryID=&amp;quot;org.eclipse.ui.internal.WorkingSetFactory&amp;quot; id=&amp;quot;1382792884467_1&amp;quot; label=&amp;quot;Other Projects&amp;quot; name=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;activeWorkingSet workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;allWorkingSets workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/packageExplorer&amp;gt;&quot; key=&quot;memento&quot;/>&#xD;&#xA;&#x9;&lt;/section>&#xD;&#xA;&lt;/section>&#xD;&#xA;"
-      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml"
-      encoding="UTF-8">
-    <description>Initialize JDT's package explorer to show working sets as its root objects</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:ResourceCreationTask"
-      id="lifecycle-mapping"
-      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;lifecycleMappingMetadata>&#xA;  &lt;pluginExecutions>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.codehaus.mojo&lt;/groupId>&#xA;        &lt;artifactId>license-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>1.9&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>update-file-header&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.apache.karaf.tooling&lt;/groupId>&#xA;        &lt;artifactId>karaf-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>[0.0,)&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>assembly&lt;/goal>&#xA;          &lt;goal>verify&lt;/goal>&#xA;          &lt;goal>features-generate-descriptor&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>com.github.eirslett&lt;/groupId>&#xA;        &lt;artifactId>frontend-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>[0.0,)&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>grunt&lt;/goal>&#xA;          &lt;goal>karma&lt;/goal>&#xA;          &lt;goal>gulp&lt;/goal>&#xA;          &lt;goal>install-node-and-yarn&lt;/goal>&#xA;          &lt;goal>webpack&lt;/goal>&#xA;          &lt;goal>jspm&lt;/goal>&#xA;          &lt;goal>npm&lt;/goal>&#xA;          &lt;goal>yarn&lt;/goal>&#xA;          &lt;goal>bower&lt;/goal>&#xA;          &lt;goal>install-node-and-npm&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.commonjava.maven.plugins&lt;/groupId>&#xA;        &lt;artifactId>directory-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>0.1&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>highest-basedir&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.apache.maven.plugins&lt;/groupId>&#xA;        &lt;artifactId>maven-dependency-plugin&lt;/artifactId>&#xA;        &lt;versionRange>[0.0,)&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>unpack&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;  &lt;/pluginExecutions>&#xA;&lt;/lifecycleMappingMetadata>&#xA;"
-      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"
-      encoding="UTF-8">
-    <description></description>
-  </setupTask>
-  <setupTask
       xsi:type="setup.p2:P2Task">
     <requirement
         name="bndtools.main.feature.feature.group"/>
     <requirement
         name="bndtools.m2e.feature.feature.group"/>
+    <requirement
+        name="bndtools.pde.feature.feature.group"/>
     <requirement
         name="org.eclipse.m2e.feature.feature.group"/>
     <requirement
@@ -1001,8 +980,35 @@
         url="http://oss.opensagres.fr/angular2-eclipse/1.1.0/"/>
     <repository
         url="http://www.lastnpe.org/eclipse-external-annotations-m2e-plugin-p2-site/"/>
-    <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
+    <description></description>
   </setupTask>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Xmx"
+      value="1024m"
+      vm="true">
+    <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      excludedTriggers="STARTUP MANUAL"
+      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;section name=&quot;Workbench&quot;>&#xD;&#xA;&#x9;&lt;section name=&quot;org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart&quot;>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;true&quot; key=&quot;group_libraries&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;false&quot; key=&quot;linkWithEditor&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;2&quot; key=&quot;layout&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;2&quot; key=&quot;rootMode&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;packageExplorer configured=&amp;quot;true&amp;quot; group_libraries=&amp;quot;1&amp;quot; layout=&amp;quot;2&amp;quot; linkWithEditor=&amp;quot;0&amp;quot; rootMode=&amp;quot;2&amp;quot; sortWorkingSets=&amp;quot;false&amp;quot; workingSetName=&amp;quot;&amp;quot;&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;workingSet editPageId=&amp;quot;org.eclipse.jdt.internal.ui.OthersWorkingSet&amp;quot; factoryID=&amp;quot;org.eclipse.ui.internal.WorkingSetFactory&amp;quot; id=&amp;quot;1382792884467_1&amp;quot; label=&amp;quot;Other Projects&amp;quot; name=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;activeWorkingSet workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;allWorkingSets workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/packageExplorer&amp;gt;&quot; key=&quot;memento&quot;/>&#xD;&#xA;&#x9;&lt;/section>&#xD;&#xA;&lt;/section>&#xD;&#xA;"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml"
+      encoding="UTF-8">
+    <description>Initialize JDT's package explorer to show working sets as its root objects</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      id="lifecycle-mapping"
+      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;lifecycleMappingMetadata>&#xA;  &lt;pluginExecutions>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.codehaus.mojo&lt;/groupId>&#xA;        &lt;artifactId>license-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>1.9&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>update-file-header&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.apache.karaf.tooling&lt;/groupId>&#xA;        &lt;artifactId>karaf-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>[0.0,)&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>assembly&lt;/goal>&#xA;          &lt;goal>verify&lt;/goal>&#xA;          &lt;goal>features-generate-descriptor&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>com.github.eirslett&lt;/groupId>&#xA;        &lt;artifactId>frontend-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>[0.0,)&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>grunt&lt;/goal>&#xA;          &lt;goal>karma&lt;/goal>&#xA;          &lt;goal>gulp&lt;/goal>&#xA;          &lt;goal>install-node-and-yarn&lt;/goal>&#xA;          &lt;goal>webpack&lt;/goal>&#xA;          &lt;goal>jspm&lt;/goal>&#xA;          &lt;goal>npm&lt;/goal>&#xA;          &lt;goal>yarn&lt;/goal>&#xA;          &lt;goal>bower&lt;/goal>&#xA;          &lt;goal>install-node-and-npm&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.commonjava.maven.plugins&lt;/groupId>&#xA;        &lt;artifactId>directory-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>0.1&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>highest-basedir&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.apache.maven.plugins&lt;/groupId>&#xA;        &lt;artifactId>maven-dependency-plugin&lt;/artifactId>&#xA;        &lt;versionRange>[0.0,)&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>unpack&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;  &lt;/pluginExecutions>&#xA;&lt;/lifecycleMappingMetadata>&#xA;"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"
+      encoding="UTF-8">
+    <description></description>
+  </setupTask>
+  <project name="maggu2810.base.project">
+    <stream
+        name="maggu2810.base.stream"/>
+  </project>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
