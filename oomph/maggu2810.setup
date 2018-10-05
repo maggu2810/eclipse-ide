@@ -462,6 +462,14 @@
           key="/instance/org.eclipse.wst.sse.ui/hoverModifiers">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/sp_cleanup.remove_redundant_semicolons">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/sp_cleanup.remove_redundant_modifiers">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -721,7 +729,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.convert_to_enhanced_for_loop"
-          value="false"/>
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.correct_indentation"
@@ -785,11 +793,11 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_member_accesses_through_subtypes_with_declaring_class"
-          value="false"/>
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_member_accesses_with_declaring_class"
-          value="true"/>
+          value="false"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_method_accesses_with_declaring_class"
@@ -797,6 +805,14 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.remove_private_constructors"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/sp_cleanup.remove_redundant_modifiers"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/sp_cleanup.remove_redundant_semicolons"
           value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
