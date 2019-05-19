@@ -4,6 +4,18 @@ This repository contains an Eclipse IDE setup file that I am using for my projec
 
 It contains the formatter rules I am using, save actions, plugins I am working with etc.
 
+## Use it
+
+* Start the Eclipse Installer
+* Ensure you are using the "Advanced Mode"
+** Product Version: Latest Release
+* Next
+* On the "Project" selection press the "+" ("Add user projects") button
+** Catalog: Github Projects
+** Resource URIs: https://raw.githubusercontent.com/maggu2810/eclipse-ide/master/oomph/maggu2810.setup
+* Now you can mark the Project group: `Github Projects, <User>, maggu2810 base IDE setup`
+* Install the IDE
+
 ## Plugins
 
 ### M2E Sourcelookup
