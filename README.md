@@ -26,6 +26,12 @@ https://github.com/bjmi/m2e.sourcelookup
 
 This plugin is rather useful e.g. if you would like to debug a Karaf container with all the bundles available in the container (create a POM using KAT Bundle POM Generator).
 
+### Enhanced Class Decompiler
+
+Enhanced Class Decompiler is a plug-in for the Eclipse platform. It integrates JD, Jad, FernFlower, CFR, Procyon seamlessly with Eclipse, allows you to display all the Java sources during your debugging process, even if you do not have them all, and you can debug these class files without source code directly.
+
+https://ecd-plugin.github.io/ecd/
+
 ## Notes
 
 ### Maven Development Tools
